@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: 'Inter', sans-serif;
+min-height: 100vh;
+background-color: hsl(233, 47%, 7%);
+display: flex;
+align-items: center;
+font-size: 15px;
+}
+
+
+.container{
+max-width: 1020px;
+margin: 0 auto
+} 
+
+.wrapper{
+    background-color: hsla(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+
+}
+
+.img__component img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img__component{
+    position: relative;
+}
+
+
+.img__component::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(277, 31%, 47%, 0.6);
+}
+
+.text__component{
+    padding: 13%;
+}
+
+.title{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding-bottom: 22px;
+}
+
+.title span{
+    color: hsla(277, 64%, 61%, 0.6);
+}
+
+.subtitule{
+    color: hsl(0, 0%, 65%);
+    line-height: 1.8;
+}
+
+.stat__box{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+
+.stat__box p.num{
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.stat__box p{
+    color: hsl(0, 0%, 65%);
+}
+
+
+
+
+
+/* Para observar desde tablet*/
+@media only screen and (max-width: 768px) and (min-width: 426px){
+   body{
+       font-size: 12px;
+   }
+
+
+.text__component{
+    padding: 12%;
+}
+
+.title{
+    font-size: 22px;
+}
+
+.stat__box{
+    padding-top: 30px;
+}
+
+.stat__box p.num{
+    font-size: 17px;
+}
+
+}
+
+
+/* Para observar desde movile*/
+@media only screen and (max-width: 425px) {
+    body{
+        text-align: center;
+    }
+
+
+.wrapper{
+    grid-template-columns: 1fr;
+
+}
+
+.img__component{
+    order: -1;
+}
+
+.title{
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.text__component {
+    padding: 12% 8%;
+}
+
+.stat__box{
+    flex-direction: column;
+padding-top: 30px;
+}
+
+.stat__box div{
+    margin-top: 20px;
+}
+
+}
+
+
